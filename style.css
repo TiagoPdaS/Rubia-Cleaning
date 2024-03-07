@@ -1,87 +1,180 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "poppins", sans-serif;
 }
 
-.center{
-    display: flex;
-    max-width: 1100px;
-    padding: 0 2%;
-    margin: 0 auto;
-    flex-wrap: wrap;
- }
-
- section.main{
-    background-image: url('components/images/bg.svg');
-    background-position: center;
-    background-size: cover;
-    min-height: 700px;
-    padding: 20px 0 80px 0;
- }
-
- .menu{
-    display: flex;
-    width: 100%;
- }
-
- .logo {
-    font-size: 2rem;
-    color: #fff;
-    font-weight: 700;
-    cursor: default;
-    text-decoration: none;
-    background-color: #0f3fd3;
-    padding: 10px 10px;
-    border-radius: 10px;
-    text-align: center;
-    
-  }
- span {
-    color: #ffdd33 !important;
-    text-decoration: none;
-  }
- .logo-menu{
-    width: 50%;
- }
-
- .items-menu{
-    width: 50%;
-    float: left;
-    margin-left: 0;
- }
-
- .items-menu a{
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-    margin: 0 10px;
- }
-
- .items-menu a:hover{
-    border-bottom: 3px solid #ffdd33;
- }
-
- .items-menu a.contact-btn{
-    background-color: #0f3fd3;
-    padding: 10px 10px;
-    border-radius: 10px;
- }
-
- .text-home{
-    display: block;
-    width: 100%;
-    color: white;
-    text-align: center;
-    padding-top: 80px;
- }
-
- .text-home h1{
-    font-size: 3rem;
- }
-.home-img{
-    max-width: 100%;
-    border-radius: 150px 20px 150px 20px;
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
 }
+
+body {
+  background: #1f242d;
+  color: #fff;
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 4rem;
+  margin: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.header.sticky {
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 600;
+  cursor: default;
+}
+
+span {
+  color: #0000ff
+  ;
+  text-decoration: none;
+}
+
+.navbar a {
+  font-size: 1.7rem;
+  color: #fff;
+  margin-left: 4rem;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #0000ff
+  ;
+}
+
+#menu-icon {
+  font-size: 3.6rem;
+  color: #fff;
+  display: none;
+}
+ 
+ @media (max-width: 1200px) {
+   html {
+     font-size: 55%;
+   }
+   .about {
+     text-align: center;
+     justify-content: center;
+     align-items: center;
+   }
+   .about h2 {
+     text-align: center;
+   }
+ }
+ @media (max-width: 991px) {
+   #menu-icon {
+     display: block;
+   }
+   .header {
+     padding: 2rem 10%;
+   }
+   .home {
+     margin-top: 5rem;
+     text-align: center;
+     justify-content: center;
+   }
+   .navbar {
+     position: absolute;
+     top: 100%;
+     left: 0;
+     width: 100%;
+     padding: 1rem 3%;
+     background: black;
+     border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+     display: none;
+   }
+   .navbar.active {
+     display: block;
+   }
+   .navbar a {
+     display: block;
+     font-size: 2rem;
+     margin: 3rem 0;
+   }
+   .home {
+     flex-direction: column;
+ 
+ }
+ @media (max-width: 768px) {
+   #menu-icon {
+     display: block;
+   }
+   .home {
+     margin-top: 5rem;
+     text-align: center;
+     justify-content: center;
+     align-items: center;
+   }
+   .navbar {
+     position: absolute;
+     top: 100%;
+     left: 0;
+     width: 100%;
+     padding: 1rem 3%;
+     background: black;
+     border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+     display: none;
+   }
+   .navbar.active {
+     display: block;
+   }
+   .navbar a {
+     display: block;
+     font-size: 2rem;
+     margin: 3rem 0;
+   }
+   .home {
+     flex-direction: column;
+   }
+ }
+ @media (max-width: 620px) {
+   .home {
+     text-align: center;
+     justify-content: center;
+     align-items: center;
+   }
+   
+ }
+ @media (max-width: 450px) {
+   html {
+     font-size: 50%;
+   }
+   .home {
+     text-align: center;
+     justify-content: center;
+     align-items: center;
+}
+ }}
