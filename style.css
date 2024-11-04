@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  background: #1f242d;
+ /* background: #1f242d;*/
   color: #fff;
 }
 
@@ -36,7 +36,8 @@ section {
   left: 0;
   width: 100%;
   padding: 2rem 9%;
-  background: black;
+  
+ /* background: black;*/
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -60,25 +61,32 @@ span {
   text-decoration: none;
 }
 
+.navbar{
+  background-color: #fff;
+}
+
 .navbar a {
+  color: white;
   font-size: 1.7rem;
-  color: #fff;
+  color: #50ADE6;
   margin-left: 4rem;
   transition: 0.3s;
 }
 
 .navbar a:hover,
 .navbar a.active {
-  color: #0000ff
-  ;
+  color: #27719f;
+  text-decoration:underline;
 }
 
 #menu-icon {
   font-size: 3.6rem;
-  color: #fff;
+  color:#50ADE6 ;
   display: none;
 }
  
+
+
  @media (max-width: 1200px) {
    html {
      font-size: 55%;
@@ -110,9 +118,9 @@ span {
      left: 0;
      width: 100%;
      padding: 1rem 3%;
-     background: black;
-     border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
-     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+     background: white !important;
+     border-top: 0.1rem solid rgba(0, 0, 0, 0.8);
+     box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.8);
      display: none;
    }
    .navbar.active {
@@ -143,7 +151,7 @@ span {
      left: 0;
      width: 100%;
      padding: 1rem 3%;
-     background: black;
+     background: white !important;
      border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
      display: none;
