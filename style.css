@@ -16,7 +16,6 @@
 
   --bg-secondary: #f0f0f0;
 
-
 }
 
 
@@ -37,7 +36,7 @@ html {
 }
 
 body {
- /* background: #1f242d;*/
+  /* background: #1f242d;*/
   color: var(--light-color);
 }
 
@@ -57,9 +56,8 @@ section {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 2rem 9%;
-  
- /* background: black;*/
+  padding: 1rem 9%;
+  background: var(--light-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -75,6 +73,7 @@ section {
   color: var(--light-color);
   font-weight: 600;
   cursor: default;
+  border-radius: 50px;
 }
 
 span {
@@ -82,14 +81,22 @@ span {
   text-decoration: none;
 }
 
-.navbar{
+.navbar {
   background-color: var(--light-color);
 }
 
+.btn-contact {
+
+  padding: 10px 20px 10px 20px;
+  border-radius: 15px;
+  background-color: var(--secondary-color);
+
+}
+
 .navbar a {
-  color: var(--light-color);
+
   font-size: 1.7rem;
-  color: var(--third-color);
+  color: var(--dark-color);
   margin-left: 4rem;
   transition: 0.3s;
 }
@@ -97,130 +104,206 @@ span {
 .navbar a:hover,
 .navbar a.active {
   color: var(--light-color);
-
-  background-color:  var(--secondary-color)
+  padding: 10px 20px 10px 20px;
+  border-radius: 15px;
+  background-color: var(--secondary-color)
 }
 
 #menu-icon {
   font-size: 3.6rem;
-  color:var(--third-color) ;
+  color: var(--third-color);
   display: none;
 }
 
- /* === menu-end === */
+/* === menu-end === */
 
-
-
- 
- @media (max-width: 1200px) {
-   html {
-     font-size: 55%;
-   }
-   .about {
-     text-align: center;
-     justify-content: center;
-     align-items: center;
-   }
-   .about h2 {
-     text-align: center;
-   }
- }
- @media (max-width: 991px) {
-   #menu-icon {
-     display: block;
-   }
-   .header {
-     padding: 2rem 10%;
-   }
-   .home {
-     margin-top: 5rem;
-     text-align: center;
-     justify-content: center;
-   }
-   .navbar {
-     position: absolute;
-     top: 100%;
-     left: 0;
-     width: 100%;
-     padding: 1rem 3%;
-     background: var(--light-color) !important;
-     border-top: 0.1rem solid rgba(0, 0, 0, 0.8);
-     box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.8);
-     display: none;
-   }
-   .navbar.active {
-     display: block;
-   }
-   .navbar a {
-     display: block;
-     font-size: 2rem;
-     margin: 3rem 0;
-   }
-   .home {
-     flex-direction: column;
- 
- }
- @media (max-width: 768px) {
-   #menu-icon {
-     display: block;
-   }
-   .home {
-     margin-top: 5rem;
-     text-align: center;
-     justify-content: center;
-     align-items: center;
-   }
-   .navbar {
-     position: absolute;
-     top: 100%;
-     left: 0;
-     width: 100%;
-     padding: 1rem 3%;
-     background: var(--light-color) !important;
-     border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
-     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-     display: none;
-   }
-   .navbar.active {
-     display: block;
-   }
-   .navbar a {
-     display: block;
-     font-size: 2rem;
-     margin: 3rem 0;
-   }
-
-   
-.navbar a:hover,
-.navbar a.active {
-  margin: 25px;
-  padding: 5px 0 5px 50px;
-  border-radius: 8px;
+.banner {
+  position: relative;
+  height: 80vh;
+  background-image: url("components/images/room.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 150px;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
   color: var(--light-color);
-
-  background-color:  var(--secondary-color)
 }
-   
 
-   .home {
-     flex-direction: column;
-   }
- }
- @media (max-width: 620px) {
-   .home {
-     text-align: center;
-     justify-content: center;
-     align-items: center;
-   }
-   
- }
- @media (max-width: 450px) {
-   html {
-     font-size: 50%;
-   }
-   .home {
-     text-align: center;
-     justify-content: center;
-     align-items: center;
+/* camada escura por cima da imagem */
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
 }
- }}
+
+/* conteúdo do banner */
+.banner-content {
+  position: relative;
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.banner h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.banner-btn {
+  display: inline-block;
+  padding: 14px 30px;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.banner-btn:hover {
+  background-color: var(--third-color);
+  transform: translateY(-3px);
+}
+
+
+
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+
+  .about {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about h2 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 991px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .header {
+    padding: 2rem 10%;
+  }
+
+  .home {
+    margin-top: 5rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--light-color) !important;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.8);
+    display: none;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+
+  .home {
+    flex-direction: column;
+
+  }
+
+  @media (max-width: 768px) {
+    #menu-icon {
+      display: block;
+    }
+
+    .home {
+      margin-top: 5rem;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .navbar {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 1rem 3%;
+      background: var(--light-color) !important;
+      border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+      display: none;
+    }
+
+    .navbar.active {
+      display: block;
+    }
+
+    .navbar a {
+      display: block;
+      font-size: 2rem;
+      margin: 3rem 0;
+    }
+
+
+    .navbar a:hover,
+    .navbar a.active {
+      margin: 25px;
+      padding: 5px 0 5px 50px;
+      border-radius: 8px;
+      color: var(--light-color);
+
+      background-color: var(--secondary-color)
+    }
+
+
+    .home {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .home {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+  }
+
+  @media (max-width: 450px) {
+    html {
+      font-size: 50%;
+    }
+
+    .home {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
