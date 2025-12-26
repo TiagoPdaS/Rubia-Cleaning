@@ -1,5 +1,25 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  /* Cores principais */
+  --primary-color: #0000ff;
+  --secondary-color: #27719f;
+  --third-color: #50ADE6;
+
+  --accent-color: #feca57;
+
+  /* Tons neutros */
+  --dark-color: #222222;
+  --gray-color: #777777;
+  --light-color: #fff;
+
+  --bg-secondary: #f0f0f0;
+
+
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -18,8 +38,10 @@ html {
 
 body {
  /* background: #1f242d;*/
-  color: #fff;
+  color: var(--light-color);
 }
+
+/* === menu === */
 
 section {
   min-height: 100vh;
@@ -50,43 +72,46 @@ section {
 
 .logo {
   font-size: 2.5rem;
-  color: #fff;
+  color: var(--light-color);
   font-weight: 600;
   cursor: default;
 }
 
 span {
-  color: #0000ff
-  ;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
 .navbar{
-  background-color: #fff;
+  background-color: var(--light-color);
 }
 
 .navbar a {
-  color: white;
+  color: var(--light-color);
   font-size: 1.7rem;
-  color: #50ADE6;
+  color: var(--third-color);
   margin-left: 4rem;
   transition: 0.3s;
 }
 
 .navbar a:hover,
 .navbar a.active {
-  color: #27719f;
-  text-decoration:underline;
+  color: var(--light-color);
+
+  background-color:  var(--secondary-color)
 }
 
 #menu-icon {
   font-size: 3.6rem;
-  color:#50ADE6 ;
+  color:var(--third-color) ;
   display: none;
 }
+
+ /* === menu-end === */
+
+
+
  
-
-
  @media (max-width: 1200px) {
    html {
      font-size: 55%;
@@ -118,7 +143,7 @@ span {
      left: 0;
      width: 100%;
      padding: 1rem 3%;
-     background: white !important;
+     background: var(--light-color) !important;
      border-top: 0.1rem solid rgba(0, 0, 0, 0.8);
      box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.8);
      display: none;
@@ -151,7 +176,7 @@ span {
      left: 0;
      width: 100%;
      padding: 1rem 3%;
-     background: white !important;
+     background: var(--light-color) !important;
      border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
      display: none;
@@ -164,6 +189,19 @@ span {
      font-size: 2rem;
      margin: 3rem 0;
    }
+
+   
+.navbar a:hover,
+.navbar a.active {
+  margin: 25px;
+  padding: 5px 0 5px 50px;
+  border-radius: 8px;
+  color: var(--light-color);
+
+  background-color:  var(--secondary-color)
+}
+   
+
    .home {
      flex-direction: column;
    }
